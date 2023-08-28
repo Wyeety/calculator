@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Interest Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="calculator">
+    <h2>Simple Interest Calculator</h2>
+      <label for="principal">Principal:</label>
+      <br>
+      <input type="number" id="principal" class="box" placeholder="Enter principal amount">
+      <br>
+      <label for="rate">Rate:</label>
+      <br>
+      <input type="number" id="rate" class="box" placeholder="Enter interest rate">
+      <br>
+      <label for="time">Time:</label>
+      <br>
+      <input type="number" id="time" class="box" placeholder="Enter time in years">
+      <br>
+      <button onclick="answer()">Calculate</button>
+    <p>Simple Interest: <span id="output"></span></p>
+  </div>
+  <script>
+    function answer(){
+      var principal = parseInt(document.getElementById("principal").value);
+      var rate = parseInt(document.getElementById("rate").value);
+      var time = parseInt(document.getElementById("time").value);
+      var interest = (principal * rate * time)/100;
+      // var total = interest + principal;
+      document.getElementById("output").innerHTML = interest;
+
+    }
+  </script>
+</body>
+</html>
